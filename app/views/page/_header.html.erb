@@ -51,10 +51,23 @@
                         <%= link_to "CONTACT", "#{root_path}#contact" %>
                             </a>
                         </li>
+                        <% if current_user %>
+                            <li class="nav-item">
+                                <%= link_to 'Sign out', destroy_user_session_path,
+                                method: :delete %>
+                            </li>
+                        <% else %>
+                            <li class="nav-item">
+                                <%= link_to 'Sign up', new_user_registration_path %>
+                            </li>
+                            <li class="nav-item">
+                                <%= link_to 'Login', new_user_session_path %>
+                            </li>
+                        <% end %>
                             
                                 
                             
-                        </li>
+                        
                     </ul>
 
                 </nav>
