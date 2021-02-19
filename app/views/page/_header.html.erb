@@ -53,15 +53,16 @@
                         </li>
                         <% if current_user %>
                             <li class="nav-item">
-                                <%= link_to 'Sign out', destroy_user_session_path,
-                                method: :delete %>
+                                <%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
                             </li>
-                        <% else %>
+                        <% else %> 
                             <li class="nav-item">
-                                <%= link_to 'Sign up', new_user_registration_path %>
+                                <%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
                             </li>
+                        <% end %>
+                        <% if can? :manage, User %>
                             <li class="nav-item">
-                                <%= link_to 'Login', new_user_session_path %>
+                                <%= link_to rails_admin.dashboard_path, class: 'login-button' do %>Dashboard<% end %>
                             </li>
                         <% end %>
                             
