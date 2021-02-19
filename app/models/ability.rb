@@ -11,12 +11,16 @@ class Ability
           can :manage, :all
           can :access, :rails_admin       # only allow admin users to access Rails Admin
           can :manage, :dashboard         # allow access to dashboard
-    end
-    if user.emploiye_role?
+    
+    elsif user.emploiye_role?
           can :manage, :all
           can :access, :rails_admin       # only allow admin users to access Rails Admin
           can :manage, :dashboard         # allow access to dashboard
+    else
+      cannot :manage, User
+      can :read, User
     end
+  
     #
     # The first argument to `can` is the action you are giving the user
     # permission to do.
