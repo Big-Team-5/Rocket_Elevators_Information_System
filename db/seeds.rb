@@ -14,3 +14,4 @@ Employee.create(last_name: 'Houde', first_name: 'Mathieu', title: 'Captain', 'em
 Employee.create(last_name: 'Boutin', first_name: 'David', title: 'Engineer', 'email' => 'david.boutin@codeboxx.biz', 'active' => 1)
 Employee.create(last_name: 'Lortie', first_name: 'Mathieu', title: 'Engineer', 'email' => 'mathieu.lortie@codeboxx.biz', 'active' => 1)
 Employee.create(last_name: 'Carrier', first_name: 'Thomas ', title: 'Engineer', 'email' => 'thomas.carrier@codeboxx.biz', 'active' => 1)
+

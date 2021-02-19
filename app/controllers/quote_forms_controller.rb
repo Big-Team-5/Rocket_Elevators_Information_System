@@ -1,4 +1,5 @@
 class QuoteFormsController < ApplicationController
+  skip_before_action :authenticate_user!, :only => [:new, :show]
   before_action :set_quote_form, only: %i[ show edit update destroy ]
 
   # GET /quote_forms or /quote_forms.json
