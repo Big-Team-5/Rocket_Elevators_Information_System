@@ -6,12 +6,75 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+employee_list = [
+  {
+    first_name: "Nicolas",
+    last_name: "Genest",
+    title: "CEO",
+    email: "nicolas.genest@codeboxx.biz"
+  },
+  {
+    first_name: "Nadya",
+    last_name: "Fortier",
+    title: "Director",
+    email: "nadya.fortier@codeboxx.biz"
+  },
+  {
+    first_name: "Martin",
+    last_name: "Chantal",
+    title: "Director Assistant",
+    email: "martin.chantal@codeboxx.biz"
+  },
+  {
+    first_name: "Mathieu",
+    last_name: "Houde",
+    title: "Captain",
+    email: "mathieu.houde@codeboxx.biz"
+  },
+  {
+    first_name: "David",
+    last_name: "Boutin",
+    title: "Engineer",
+    email: "david.boutin@codeboxx.biz"
+  },
+  {
+    first_name: "Mathieu",
+    last_name: "Lortie",
+    title: "Engineer",
+    email: "mathieu.lortie@codeboxx.biz"
+  },
+  {
+    first_name: "Thomas",
+    last_name: "Carrier",
+    title: "Engineer",
+    email: "thomas.carrier@codeboxx.biz"
+  },
+]
 
-Employee.create(last_name: 'Genest', first_name: 'Nicolas', title: 'CEO', 'email' => 'nicolas.genest@codeboxx.biz', 'active' => 1)
-Employee.create(last_name: 'Fortier', first_name: 'Nadya', title: 'Director', 'email' => 'nadya.fortier@codeboxx.biz', 'active' => 1)
-Employee.create(last_name: 'Chantal', first_name: 'Martin', title: 'Director Assistant', 'email' => 'martin.chantal@codeboxx.biz', 'active' => 1)
-Employee.create(last_name: 'Houde', first_name: 'Mathieu', title: 'Captain', 'email' => 'mathieu.houde@codeboxx.biz', 'active' => 1)
-Employee.create(last_name: 'Boutin', first_name: 'David', title: 'Engineer', 'email' => 'david.boutin@codeboxx.biz', 'active' => 1)
-Employee.create(last_name: 'Lortie', first_name: 'Mathieu', title: 'Engineer', 'email' => 'mathieu.lortie@codeboxx.biz', 'active' => 1)
-Employee.create(last_name: 'Carrier', first_name: 'Thomas ', title: 'Engineer', 'email' => 'thomas.carrier@codeboxx.biz', 'active' => 1)
+puts "Seed Started"
+######################################################
 
+
+employee_list.each do |employee|
+  user = User.create!(
+    email: employee[:email],
+    password: "codeboxx1",
+    emploiye_role: true,
+    user_role: false
+  )
+  employee = Employee.create!(
+    first_name: employee[:first_name],
+    last_name: employee[:last_name],
+    title: employee[:title],
+    email: employee[:email],
+    user: user
+  )
+end
+
+puts "#{Employee.count} employees created"
+
+
+
+
+#####################################################
+puts "Seed Ended"
