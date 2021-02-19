@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2021_02_19_071201) do
     t.string "last_name"
     t.string "first_name"
     t.string "title"
-    t.string "email"
-    t.boolean "active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
+    t.boolean "active"
     t.bigint "user_id"
     t.index ["user_id"], name: "index_employees_on_user_id"
   end
@@ -34,11 +34,6 @@ ActiveRecord::Schema.define(version: 2021_02_19_071201) do
     t.string "Sum_For_All_Units"
     t.string "Installation_Fees"
     t.string "Total_Price"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "quotes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
