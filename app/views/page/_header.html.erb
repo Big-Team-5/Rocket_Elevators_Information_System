@@ -60,7 +60,7 @@
                                 <%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
                             </li>
                         <% end %>
-                        <% if can? :manage, user %>
+                        <% if can? :manage, :all %>
                             <li class="nav-item">
                                 <%= link_to rails_admin.dashboard_path, class: 'login-button' do %>Dashboard<% end %>
                             </li>
