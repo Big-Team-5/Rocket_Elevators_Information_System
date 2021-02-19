@@ -51,19 +51,16 @@
                         <%= link_to "CONTACT", "#{root_path}#contact" %>
                             </a>
                         </li>
-                        <% if current_user %>
-                            <li class="nav-item">
-                                <%= link_to destroy_user_session_path, method: :delete do %>Log out<% end %>
-                            </li>
-                        <% else %> 
-                            <li class="nav-item">
-                                <%= link_to new_user_session_path, class: 'login-button' do %>Sign in<% end %>
-                            </li>
-                        <% end %>
-                        <% if can? :manage, User %>
-                            <li class="nav-item">
-                                <%= link_to rails_admin.dashboard_path, class: 'login-button' do %>Dashboard<% end %>
-                            </li>
+                        <% if user_signed_in? %>
+
+                            <%= link_to('Edit registration', edit_user_registration_path) %>
+                            <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+
+                        <% else %>
+
+                            <%= link_to('Register', new_user_registration_path)  %>
+                            <%= link_to('Login', new_user_session_path)  %>  
+
                         <% end %>
                             
                                 
