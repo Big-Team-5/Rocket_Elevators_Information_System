@@ -62,5 +62,3 @@ end
     gem 'rails_admin', '~> 2.0'
     gem 'toastr-rails'
     gem 'cancancan' 
-    
-# ruby-on-rails-works
