@@ -3,7 +3,7 @@
 
 	<!-- -->
 	<section id="slider" class="halfheight mobile-fullheight" style="background:url('assets/images/RE/Parallax_bg.jpg') top;">
-	<%= image_tag("/assets/RE/Parallax_bg.jpg",class:"img-fluid", width:"1500", height:"300", alt:"product line")%>
+	<%= image_tag("/assets/RE/Parallax_bg.jpg",class:"img-fluid", style:'width:100%; height:300;', alt:"product line")%>
 
 		<span class="raster overlay dark-3 z-index-0"><!-- dark|light overlay [0 to 9 opacity] --></span>
 
@@ -36,7 +36,7 @@
 					<label class="txtst24 pr-30 d-inline">Building Type</label>
 					
 					<select id="building-type" class="form-control-pointer stxtst18" name="building-types">
-							<option id="choose" class ="txtst18" value="choose">Choose one type</option>
+							<option id="choose" class ="txtst18" value="">Choose one type</option>
 							<option id="residential" class="txtst18" value="residential">Residential</option>
 							<option id="commercial" class="txtst18" value="commercial">Commercial</option>
 							<option id="corporate" class="txtst18" value="corporate">Corporate</option>
@@ -55,11 +55,11 @@
 					<input id="res-apts" class="form-control go" oninput=" validity.valid||(value='');finalprice();" placeholder="# of apartments" name="res-aparts" type="number" min="0" value="0">
 
 				</div>
-				<div id="number-of-floors" class="col-md-4 col-xs-12 pt-30">
+				<div id="number-of-floors" class="col-md-4 col-xs-12 pt-30 all">
 					<label for="res-floors" style="font-size: 18px;">No. of Floors</label>
 					<input id="floors" class="form-control go" oninput=" validity.valid||(value='');finalprice();" placeholder="# of floors" name="res-floors" type="number" min="0" value="0">
 				</div>
-				<div id="number-of-basements" class="col-md-4 col-xs-12 pt-30">
+				<div id="number-of-basements" class="col-md-4 col-xs-12 pt-30 all">
 					<label for="res-basements" style="font-size: 18px;">No. of Basements</label>
 					<input id="basements" class="form-control go" oninput=" validity.valid||(value='');finalprice();" placeholder="# of basements" name="res-basements" type="number" min="0" value="0">
 				</div>  
@@ -160,46 +160,46 @@
 	<div class="container pt-50 pb-30" id="Outpout">
 
     <%= form_with(model: quote_form, local: true) do |form| %>
-  <% if quote_form.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(quote_form.errors.count, "error") %> prohibited this quote_form from being saved:</h2>
+		<% if quote_form.errors.any? %>
+			<div id="error_explanation">
+			<h2><%= pluralize(quote_form.errors.count, "error") %> prohibited this quote_form from being saved:</h2>
 
-      <ul>
-      <% quote_form.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+			<ul>
+			<% quote_form.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+			<% end %>
+			</ul>
+			</div>
+		<% end %>
 
 
 
 		<div class="row">
 			<div class="col-md-4 col-xs-12" id="elevator-amount">
 				<%= form.label :Elevators, style:"font-size: 18px;" %>
-                <%= form.text_field :Elevators, class:".col-6 .col-md-4", id:"el-req" %>
+                <%= form.text_field :Elevators, class:".col-6 .col-md-4 form-control", id:"el-req" %>
 			</div>
 		
 			<div class="col-md-4 col-xs-12" id="elevator-unit-price">
 				<%= form.label :Price_Per_Unit, style:"font-size: 18px;" %>
-                <%= form.text_field :Price_Per_Unit, class:".col-6 .col-md-4", id:"e-u-p" %>
+                <%= form.text_field :Price_Per_Unit, class:".col-6 .col-md-4 form-control", id:"e-u-p" %>
 			</div> 
 		</div>
 
 		<div class="row">
 			<div id="elevator-total-price" class="col-md-4 col-xs-12">
 				<%= form.label :Sum_For_All_Units, style:"font-size: 18px;" %>
-                <%= form.text_field :Sum_For_All_Units, class:".col-6 .col-md-4", id:"e-t-p" %>	
+                <%= form.text_field :Sum_For_All_Units, class:".col-6 .col-md-4 form-control", id:"e-t-p" %>	
 			</div> 
 		
 			<div id="installation-fees" class="col-md-4 col-xs-12">
 				<%= form.label :Installation_Fees, style:"font-size: 18px;" %>
-                <%= form.text_field :Installation_Fees, class:".col-6 .col-md-4", id:"inst-fees" %>
+                <%= form.text_field :Installation_Fees, class:".col-6 .col-md-4 form-control", id:"inst-fees" %>
 			</div>
 
 			<div id="final-price" class="col-md-4 col-xs-12">
 				<%= form.label :Total_Price, style:"font-size: 18px;" %>
-                <%= form.text_field :Total_Price, class:".col-6 .col-md-4", id:"fin-price" %>
+                <%= form.text_field :Total_Price, class:".col-6 .col-md-4 form-control", id:"fin-price" %>
 			</div>
 		</div>
 
@@ -213,45 +213,45 @@
 	 
 	<div class="container pt-50 pb-30" id="Info">
 
-		<div class="container pt-50 pb-30" id="Info">
-			<div class="row align-items-start">
-				<div class="field">
-					<%= form.label :FirstName, style:"font-size: 18px;" %>
-					<%= form.text_field :FirstName , class:".col-6 .col-md-4"  %>
+	
+			<div class="row">
+				<div class="field col-md-4 col-xs-12">
+					<%= form.label :First_Name, style:"font-size: 18px;" %>
+					<%= form.text_field :FirstName , class:"form-control"  %>
+				</div>
+
+				<div class="field col-md-4 col-xs-12">
+					<%= form.label :Last_Name, style:"font-size: 18px;" %>
+					<%= form.text_field :LastName , class:"form-control"  %>
+				</div>
+				<div class="col-md-4 col-xs-12">
 				</div>
 			</div>
-			<div class="row align-items-start">
-				<div class="field">
-					<%= form.label :LastName, style:"font-size: 18px;" %>
-					<%= form.text_field :LastName , class:".col-6 .col-md-4"  %>
+			<div class="row align-items-end">
+				<div class="field col-md-4 col-xs-12">
+					<%= form.label :Phone_Number, style:"font-size: 18px;" %>
+					<%= form.text_field :PhoneNumber , class:".col-6 .col-md-4 form-control"  %>
 				</div>
-			</div>
-			<div class="row align-items-start">
-				<div class="field">
-					<%= form.label :PhoneNumber, style:"font-size: 18px;" %>
-					<%= form.text_field :PhoneNumber , class:".col-6 .col-md-4"  %>
-				</div>
-			</div>
-			<div class="row align-items-start">
-			<div class="field">
+			
+				<div class="field col-md-4 col-xs-12">
 					<%= form.label :Email, style:"font-size: 18px;" %>
-					<%= form.text_field :Email, class:".col-6 .col-md-4" %>
+					<%= form.text_field :Email, class:".col-6 .col-md-4 form-control" %>
 				</div>
-			</div>
-			<div class="row align-items-start">
-				<div class="actions">
-					<%= form.submit class:"btn btn-danger btn-md" , style:"font-size: 18px;" %>
+		
+				<div class="col-md-4 col-xs-12">
+					<div class="actions mb-15">
+						<%= form.submit class:"btn btn-danger btn-md" , style:"font-size: 18px;" %>
+					</div>
 				</div>
-			</div>
-				
-			</div>
+			</div>	
+	
 
 
       <!--  <%= render 'form', quote_form: @quote_form %>
 
         <%= link_to 'Back', quote_forms_path %>
 
-	-->
+		-->
 	
 	</div>
 	
