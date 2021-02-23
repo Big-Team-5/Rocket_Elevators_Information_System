@@ -10,7 +10,96 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_19_071201) do
+ActiveRecord::Schema.define(version: 2021_02_23_140736) do
+
+  create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "type_of_address"
+    t.string "status"
+    t.string "entity"
+    t.string "number_and_street"
+    t.string "suite_or_apartment"
+    t.string "city"
+    t.string "postal_code"
+    t.string "country"
+    t.string "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "batteries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "buildingId"
+    t.string "Type"
+    t.string "Status"
+    t.string "EmployeeId"
+    t.string "date_of_commissioning"
+    t.string "date_of_last_inspection"
+    t.string "certificate_of_operations"
+    t.string "information"
+    t.string "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "building_details", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "buildingId"
+    t.string "information_key"
+    t.string "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "buildings", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "CustomerId"
+    t.string "address_of_the_building"
+    t.string "Full_name_of_the_building_administrator"
+    t.string "phone_number_of_the_building_administrator"
+    t.string "Full_name_of_the_technical_contact_for_the_building"
+    t.string "technical_contact_email_for_the_building"
+    t.string "technical_contact_phone_for_the_building"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "columns", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "batteryId"
+    t.string "Type"
+    t.string "number_of_floors_served"
+    t.string "status"
+    t.string "information"
+    t.string "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "UserId"
+    t.string "compagny_Name"
+    t.string "compagny_headquarter_address"
+    t.string "Full_Name_of_the_compagny_contact"
+    t.string "compagny_contact_number"
+    t.string "email_of_the_compagny_contact"
+    t.string "compagny_description"
+    t.string "Full_name_of_the_technical_authority"
+    t.string "technical_authority_phone_for_service"
+    t.string "technical_manager_email_for_service"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "elevators", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "columnId"
+    t.string "serial_number"
+    t.string "model"
+    t.string "type"
+    t.string "status"
+    t.string "date_of_commissioning"
+    t.string "date_of_last_inspection"
+    t.string "certificate_of_inspection"
+    t.string "information"
+    t.string "notes"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "employees", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "last_name"
