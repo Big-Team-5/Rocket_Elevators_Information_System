@@ -11,6 +11,7 @@ $(document).ready(function(){
               $(".hybr").hide();
               $(".commcorphyb").hide();
               $(".corphyb").hide();
+              $(".all").show();
             } else if (optionValue === "commercial"){
               $(".resid").hide();
               $(".comm").show();
@@ -18,13 +19,15 @@ $(document).ready(function(){
               $(".hybr").hide();
               $(".commcorphyb").show();
               $(".corphyb").hide();
+              $(".all").show();
               } else if (optionValue === "corporate"){
                 $(".resid").hide();
                 $(".comm").hide();
                 $(".corp").show();
                 $(".hybr").hide();
                 $(".commcorphyb").show();
-                $(".corphyb").show();  
+                $(".corphyb").show();
+                $(".all").show();  
               } else if(optionValue === "hybrid"){
                 $(".resid").hide();
                 $(".comm").hide();
@@ -32,13 +35,15 @@ $(document).ready(function(){
                 $(".hybr").show();
                 $(".commcorphyb").show();
                 $(".corphyb").show();
+                $(".all").show();
               } else{
                 $(".resid").hide();
                 $(".comm").hide();
                 $(".corp").hide();
                 $(".hybr").hide();
                 $(".commcorphyb").hide();
-                $(".corphyb").hide(); 
+                $(".corphyb").hide();
+                $(".all").hide(); 
             }
         });
     }).change();
