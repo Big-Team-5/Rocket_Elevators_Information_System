@@ -58,7 +58,7 @@
 						data-endspeed="300"
 
 						style="z-index: 5; max-width: auto; max-height: auto; white-space: nowrap;">
-							<a class="btn btn-primary btn-xs" href="#services">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
+							<a class="btn btn-primary btn-lg" href="#services">OUR SERVICES &nbsp; <i class="fa fa-angle-right"></i></a>
 					</div>
 				</li>
 
@@ -112,7 +112,8 @@
 						data-endelementdelay="0.1"
 						data-endspeed="500"
 						style="z-index: 4; max-width: auto;">
-						<%= link_to "RESIDENTIAL", "/page/residential", class: "btn btn-primary btn-xs" %>
+						<%#<%= link_to "RESIDENTIAL", "/page/residential", class: "btn btn-primary btn-lg" %>
+						<a class="btn btn-primary btn-lg" href="/page/residential">RESIDENTIAL &nbsp; <i class="fa fa-angle-right"></i></a>
 
 					</div>
 
@@ -128,7 +129,8 @@
 						data-endelementdelay="0.1"
 						data-endspeed="500"
 						style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
-						<%= link_to "   GET A QUOTE   ", "/quote_forms/new", class:"btn btn-danger btn-xs" %>
+						<%#<%= link_to "   GET A QUOTE   ", "/quote_forms/new", class:"btn btn-danger btn-lg" %>
+						<a class="btn btn-danger btn-lg" href="/quote_forms/new">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
 					</div>
 				</li>
 
@@ -182,8 +184,7 @@
 						data-endelementdelay="0.1"
 						data-endspeed="500"
 						style="z-index: 4; max-width: auto;">
-						<%= link_to "COMMERCIAL", "/page/commercial", class: "btn btn-primary btn-lg" %>
-
+						<a class="btn btn-primary btn-lg" href="/page/commercial">COMMERCIAL &nbsp; <i class="fa fa-angle-right"></i></a>
 					</div>
 
 					<div class="tp-caption sfb tp-resizeme"
@@ -198,7 +199,7 @@
 						data-endelementdelay="0.1"
 						data-endspeed="500"
 						style="z-index: 6; max-width: auto; max-height: auto; white-space: nowrap;">
-						<%= link_to "   GET A QUOTE   ", "/quote_forms/new", class:"btn btn-danger btn-xs" %>
+						<a class="btn btn-danger btn-lg" href="/quote_forms/new">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
 					</div>
 				</li>
 
@@ -231,23 +232,21 @@
 					<%= image_tag("/assets/RE/A_360x240wards.png",class:"img-fluid", alt:"img")%>
 					<h3 class="mt-10">PROJECTS & AWARDS</h3>
 					<p>View our projects and awards section</p>
-					<a href="#portfolio" class="btn btn-default">PROJECTS & AWARDS <i class="fa fa-angle-right"></i></a>
+					<a href="#portfolio" class="btn btn-default btn-lg">PROJECTS & AWARDS <i class="fa fa-angle-right"></i></a>
 				</div>
 
 				<div class="col-sm-4">
 					<%= image_tag("/assets/RE/Serv_Residential-2.jpg",class:"img-fluid", alt:"img")%>
 					<h3 class="mt-10">RESIDENTIAL</h3>
 					<p>If you need us for your residential project</p>
-					<%= link_to "RESIDENTIAL", "/page/residentiel", class: "btn btn-default" %>
-					<%# <a href="/residential.html" class="btn btn-default">RESIDENTIAL <i class="fa fa-angle-right"></i></a> %>
+					<a class="btn btn-default btn-lg" href="/page/residential">RESIDENTIAL &nbsp; <i class="fa fa-angle-right"></i></a>
 				</div>
 
 				<div class="col-sm-4">
 					<%= image_tag("/assets/RE/Corporate_sm.jpg",class:"img-fluid", alt:"img")%>
 					<h3 class="mt-10">COMMERCIAL</h3>
 					<p>For your Commercial project, small or big. </p>
-					<%# <%= link_to "Commercial",  page_commercial_path, class="btn btn-default",<i class="fa fa-angle-right"></i>%>
-					<%= link_to "COMMERCIAL", "/page/commercial", class: "btn btn-default" %>
+					<a class="btn btn-default btn-lg" href="/page/commercial">COMMERCIAL &nbsp; <i class="fa fa-angle-right"></i></a>
 				</div>
 
 			</div>
@@ -265,7 +264,7 @@
 
 			<div class="text-center">
 				<h2 class="fs-40 fw-400">Lifting your projects since 1976</h2>
-				<%= link_to "GET A QUOTE", "/quote_forms/new", class: "btn btn-danger btn-lg"%>
+				<a class="btn btn-danger btn-lg" href="/quote_forms/new">GET A QUOTE &nbsp; <i class="fa fa-angle-right"></i></a>
 				&nbsp; OR &nbsp; 
 				<a class="btn btn-primary btn-lg" href="#services">OUR SERVICES <i class="fa fa-angle-right"></i></a>
 			</div>

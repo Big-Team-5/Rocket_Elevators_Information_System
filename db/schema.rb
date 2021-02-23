@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 2021_02_19_071201) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.boolean "superadmin_role", default: true
+    t.boolean "superadmin_role", default: false
     t.boolean "emploiye_role", default: false
     t.boolean "user_role", default: true
     t.index ["email"], name: "index_users_on_email", unique: true
