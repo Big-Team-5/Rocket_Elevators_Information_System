@@ -1,0 +1,47 @@
+<%= form_with(model: column, local: true) do |form| %>
+  <% if column.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(column.errors.count, "error") %> prohibited this column from being saved:</h2>
+
+      <ul>
+      <% column.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :batteryId %>
+    <%= form.text_field :batteryId %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Type %>
+    <%= form.text_field :Type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :number_of_floors_served %>
+    <%= form.text_field :number_of_floors_served %>
+  </div>
+
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div class="field">
+    <%= form.label :information %>
+    <%= form.text_field :information %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_field :notes %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
