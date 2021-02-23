@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+  resources :leads
   #get 'page/index'
-  root 'page#index'
+  root 'leads#new'
   get  'page/residential'
   get  'page/commercial'
   get  'page/quote'
