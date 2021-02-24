@@ -78,3 +78,22 @@ puts "#{Employee.count} employees created"
 
 #####################################################
 puts "Seed Ended"
+
+
+require "faker"
+
+5.times do
+
+  lead = Lead.create([{
+  Full_Name: Faker::FunnyName.name,
+  Company_Name: Faker::Company.name,
+  Phone: Faker::PhoneNumber.cell_phone,
+  Project_Name: Faker::Games::Heroes.name,
+  Project_Description: Faker::Quote.jack_handey,
+  Department_In_Charge: "Sales",
+  Message: Faker::Quotes::Shakespeare.hamlet_quote,
+  file_attachment: Faker::File.mime_type, 
+  
+  }])
+      
+  end
