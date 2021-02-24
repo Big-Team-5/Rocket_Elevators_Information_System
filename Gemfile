@@ -45,6 +45,7 @@ gem 'rails_admin', '~> 2.0'
 
 gem 'toastr-rails'
 gem 'cancancan'
+gem 'faker'
 
 
 
