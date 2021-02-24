@@ -13,14 +13,20 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: jayced579
+  username: admin
+  password: admin
   socket: /var/run/mysqld/mysqld.sock
+
+postgres: &postgres
+  adapter: postgresql
+  username: sirine
+  password: elyas@18
 
 development:
   <<: *default
   database: hello_development
-
+  <<: *postgres
+  database: gis
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
