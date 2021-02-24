@@ -1,6 +1,6 @@
 class Customer < ApplicationRecord
     belongs_to :user
-    has_many :addresses , as: :entity
+    belongs_to :address
     has_many :building
-    has_many :quote
+    has_many :quote_form
 end
