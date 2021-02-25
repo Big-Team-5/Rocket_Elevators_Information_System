@@ -9,7 +9,7 @@
  set :chronic_options, hours24: true
 
 # By default this would run the job every day at 3am
-every 1.day, at: '15:05' do
+every 1.day, at: '15:22' do
   rake "connect:dwh"
   puts "test **********************************"
 end
