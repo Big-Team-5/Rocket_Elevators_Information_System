@@ -102,11 +102,11 @@ ActiveRecord::Schema.define(version: 2021_02_23_140736) do
     t.string "UserId"
     t.string "compagny_Name"
     t.string "compagny_headquarter_address"
-    t.string "Full_Name_of_the_compagny_contact"
+    t.string "full_Name_of_the_compagny_contact"
     t.string "compagny_contact_number"
     t.string "email_of_the_compagny_contact"
     t.string "compagny_description"
-    t.string "Full_name_of_the_technical_authority"
+    t.string "full_name_of_the_technical_authority"
     t.string "technical_authority_phone_for_service"
     t.string "technical_manager_email_for_service"
     t.datetime "created_at", null: false
@@ -142,14 +142,14 @@ ActiveRecord::Schema.define(version: 2021_02_23_140736) do
   end
 
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "Full_Name"
-    t.string "Company_Name"
-    t.string "Email"
-    t.string "Phone"
-    t.string "Project_Name"
-    t.string "Project_Description"
-    t.string "Department_In_Charge"
-    t.string "Message"
+    t.string "full_Name"
+    t.string "company_Name"
+    t.string "email"
+    t.string "phone"
+    t.string "project_Name"
+    t.string "project_Description"
+    t.string "department_In_Charge"
+    t.string "message"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -160,15 +160,15 @@ ActiveRecord::Schema.define(version: 2021_02_23_140736) do
   end
 
   create_table "quote_forms", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "FirstName"
-    t.string "LastName"
-    t.string "PhoneNumber"
-    t.string "Email"
-    t.string "Elevators"
-    t.string "Price_Per_Unit"
-    t.string "Sum_For_All_Units"
-    t.string "Installation_Fees"
-    t.string "Total_Price"
+    t.string "firstName"
+    t.string "lastName"
+    t.string "phoneNumber"
+    t.string "email"
+    t.string "elevators"
+    t.string "price_Per_Unit"
+    t.string "sum_For_All_Units"
+    t.string "installation_Fees"
+    t.string "total_Price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

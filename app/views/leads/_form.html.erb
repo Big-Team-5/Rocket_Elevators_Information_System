@@ -912,18 +912,18 @@
 				<p class="lead font-lato">Our Team is avalaible 7 days a week for you</p>
 				<hr />
 			</header>
-      <%= form_with(model: lead, local: true) do |form| %>
-        <% if lead.errors.any? %>
-          <div id="error_explanation">
-            <h2><%= pluralize(lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+			<%= form_with(model: lead, local: true) do |form| %>
+			<% if lead.errors.any? %>
+			<div id="error_explanation">
+				<h2><%= pluralize(lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
 
-            <ul>
-            <% lead.errors.full_messages.each do |message| %>
-              <li><%= message %></li>
-            <% end %>
-            </ul>
-          </div>
-        <% end %>
+				<ul>
+				<% lead.errors.full_messages.each do |message| %>
+				<li><%= message %></li>
+				<% end %>
+				</ul>
+			</div>
+			<% end %>
 
 
 
@@ -990,7 +990,7 @@
 									</div>
 									<div class="col-md-4">
 										<label for="contact:department">Department</label>
-										<%= form.select :Department_In_Charge, ['Maintenance', 'Residential','Commercial','Others'], class:"form-control pointer" %>
+										<%= form.select :Department_In_Charge, ['Sales', 'Support','Maintenance'], class:"form-control pointer" %>
 									</div>
 							</div>
 
@@ -1017,13 +1017,13 @@
 
 									</div>
 							</div>
-              <div class = "row">
-                  <div class="actions">
-                    <%= form.submit class:"btn btn-primary" %>
-                  </div>
-              </div>
+							<div class = "row">
+								<div class="col actions">
+									<%= form.submit class:"btn btn-primary btn-lg" %>
+								</div>
+							</div>
 						</fieldset>
-            <% end %>
+						<% end %>
 
 						<div class="row">
 							<!-- <div class="col-md-12">

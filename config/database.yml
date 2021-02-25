@@ -13,8 +13,8 @@ default: &default
   adapter: mysql2
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: root
-  password: jayced579
+  username: surveytech
+  password: 2304godZ
   socket: /var/run/mysqld/mysqld.sock
 
 development:
@@ -52,3 +52,15 @@ production:
   database: hello_production
   username: hello
   password: <%= ENV['HELLO_DATABASE_PASSWORD'] %>
+
+DWH_development:
+  <<: *default
+  database: dwh_development
+
+DWH_test:
+  <<: *default
+  database: dwh_test
+
+DWH_production:
+  <<: *default
+  url: <%= ENV['DWH_DATABASE_URL'] %>

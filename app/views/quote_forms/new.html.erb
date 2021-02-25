@@ -177,29 +177,29 @@
 		<div class="row">
 			<div class="col-md-4 col-xs-12" id="elevator-amount">
 				<%= form.label :Elevators, style:"font-size: 18px;" %>
-                <%= form.text_field :Elevators, class:".col-6 .col-md-4 form-control", id:"el-req" %>
+                <%= form.text_field :Elevators, class:".col-6 .col-md-4 form-control", id:"el-req", :readonly => true %>
 			</div>
 		
 			<div class="col-md-4 col-xs-12" id="elevator-unit-price">
 				<%= form.label :Price_Per_Unit, style:"font-size: 18px;" %>
-                <%= form.text_field :Price_Per_Unit, class:".col-6 .col-md-4 form-control", id:"e-u-p" %>
+                <%= form.text_field :Price_Per_Unit, class:".col-6 .col-md-4 form-control", id:"e-u-p", :readonly => true %>
 			</div> 
 		</div>
 
 		<div class="row">
 			<div id="elevator-total-price" class="col-md-4 col-xs-12">
 				<%= form.label :Sum_For_All_Units, style:"font-size: 18px;" %>
-                <%= form.text_field :Sum_For_All_Units, class:".col-6 .col-md-4 form-control", id:"e-t-p" %>	
+                <%= form.text_field :Sum_For_All_Units, class:".col-6 .col-md-4 form-control", id:"e-t-p", :readonly => true %>	
 			</div> 
 		
 			<div id="installation-fees" class="col-md-4 col-xs-12">
 				<%= form.label :Installation_Fees, style:"font-size: 18px;" %>
-                <%= form.text_field :Installation_Fees, class:".col-6 .col-md-4 form-control", id:"inst-fees" %>
+                <%= form.text_field :Installation_Fees, class:".col-6 .col-md-4 form-control", id:"inst-fees", :readonly => true %>
 			</div>
 
 			<div id="final-price" class="col-md-4 col-xs-12">
 				<%= form.label :Total_Price, style:"font-size: 18px;" %>
-                <%= form.text_field :Total_Price, class:".col-6 .col-md-4 form-control", id:"fin-price" %>
+                <%= form.text_field :Total_Price, class:".col-6 .col-md-4 form-control", id:"fin-price", :readonly => true %>
 			</div>
 		</div>
 
