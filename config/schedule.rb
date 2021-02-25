@@ -5,8 +5,12 @@
 
 # Example:
 #
- set :output, "/path/to/my/cron_log.log"
- every 1.day, at: '8:30 am' do
-    runner "MyModel.task_to_run_at_eight_thirty_in_the_morning"
-  end
+ set :output, "log/cron.log"
+ set :chronic_options, hours24: true
+
+# By default this would run the job every day at 3am
+every 1.day, at: '15:05' do
+  rake "connect:dwh"
+  puts "test **********************************"
+end
   

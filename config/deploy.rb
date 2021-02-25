@@ -5,6 +5,7 @@ before 'deploy', 'rvm1:install:ruby'
 set :rvm_map_bins, [ 'rake', 'gem', 'bundle', 'ruby', 'puma', 'pumactl' ]
 set :application, "Dana_Duquette"
 set :repo_url, "https://github.com/Big-Team-5/Rocket_Elevators_Information_System"
+require "whenever/capistrano"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
