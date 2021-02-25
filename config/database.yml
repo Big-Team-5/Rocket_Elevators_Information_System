@@ -52,15 +52,3 @@ production:
   database: hello_production
   username: hello
   password: <%= ENV['HELLO_DATABASE_PASSWORD'] %>
-
-DWH_development:
-  <<: *default
-  database: dwh_development
-
-DWH_test:
-  <<: *default
-  database: dwh_test
-
-DWH_production:
-  <<: *default
-  url: <%= ENV['DWH_DATABASE_URL'] %>
