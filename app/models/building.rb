@@ -4,3 +4,4 @@ class Building < ApplicationRecord
     has_many :building_details
     has_many :battery
 end
+

@@ -59,9 +59,9 @@ ActiveRecord::Schema.define(version: 2021_02_24_162729) do
     t.string "technical_contact_phone_building"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "addresse_id"
+    t.bigint "address_id"
     t.bigint "customer_id"
-    t.index ["addresse_id"], name: "index_buildings_on_addresse_id"
+    t.index ["address_id"], name: "index_buildings_on_address_id"
     t.index ["customer_id"], name: "index_buildings_on_customer_id"
   end
 
@@ -78,12 +78,12 @@ ActiveRecord::Schema.define(version: 2021_02_24_162729) do
   end
 
   create_table "customers", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
-    t.string "compagny_Name"
-    t.string "compagny_headquarter_address"
-    t.string "full_Name_of_the_compagny_contact"
-    t.string "compagny_contact_number"
-    t.string "email_of_the_compagny_contact"
-    t.string "compagny_description"
+    t.string "company_Name"
+    t.string "company_headquarter_address"
+    t.string "full_Name_of_the_company_contact"
+    t.string "company_contact_number"
+    t.string "email_of_the_company_contact"
+    t.string "company_description"
     t.string "full_name_of_the_technical_authority"
     t.string "technical_authority_phone_for_service"
     t.string "technical_manager_email_for_service"
@@ -167,7 +167,7 @@ ActiveRecord::Schema.define(version: 2021_02_24_162729) do
 
   add_foreign_key "batteries", "buildings"
   add_foreign_key "building_details", "buildings"
-  add_foreign_key "buildings", "addresses", column: "addresse_id"
+  add_foreign_key "buildings", "addresses"
   add_foreign_key "buildings", "customers"
   add_foreign_key "columns", "batteries"
   add_foreign_key "customers", "addresses"
