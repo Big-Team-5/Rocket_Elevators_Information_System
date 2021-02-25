@@ -198,9 +198,12 @@ address = Address.take(10)
 end   
 
 puts "####################BUILDINGS######################"
-customer = Customer.take(50)
+
+customer = Customer.take(100)
+address = Address.take(100)
  100.times do
-    index = rand(0...19)
+    index = rand(0..19)
+    ac = rand(0..99)
     building = Building.create(
       full_name_building_administrator: Faker::Name.name,
       email_building_administrator: Faker::Internet.email,
@@ -208,7 +211,8 @@ customer = Customer.take(50)
       full_name_technical_contact_for_the_building: Faker::Name.name,
       technical_contact_email_building: Faker::Internet.email,
       technical_contact_phone_building: Faker::PhoneNumber.phone_number,
-      customer_id: customer[index].id
+      customer_id: customer[index].id,
+      address_id: address[ac].id
     )
     building.save!
    
