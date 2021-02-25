@@ -1,4 +1,3 @@
-
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -60,9 +59,9 @@ ActiveRecord::Schema.define(version: 2021_02_24_162729) do
     t.string "technical_contact_phone_building"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "addresse_id"
+    t.bigint "address_id"
     t.bigint "customer_id"
-    t.index ["addresse_id"], name: "index_buildings_on_addresse_id"
+    t.index ["address_id"], name: "index_buildings_on_address_id"
     t.index ["customer_id"], name: "index_buildings_on_customer_id"
   end
 
@@ -168,7 +167,7 @@ ActiveRecord::Schema.define(version: 2021_02_24_162729) do
 
   add_foreign_key "batteries", "buildings"
   add_foreign_key "building_details", "buildings"
-  add_foreign_key "buildings", "addresses", column: "addresse_id"
+  add_foreign_key "buildings", "addresses"
   add_foreign_key "buildings", "customers"
   add_foreign_key "columns", "batteries"
   add_foreign_key "customers", "addresses"

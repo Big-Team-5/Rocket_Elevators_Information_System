@@ -2,18 +2,18 @@ require 'pg'
 
 begin
     
-    conn = PG.connect.open(:host => 'localhost', :port => 5432, :dbname => 'Dana_Duquette', :user => 'surveytech', :password =>'2304godZ')
+    conn = PG::Connection.open(:host => 'localhost', :port => 5432, :dbname => 'Dana_Duquette', :user => 'surveytech', :password =>'2304godZ')
 
     conn.exec 'DROP TABLE IF EXISTS FactQuotes'
     conn.exec('CREATE TABLE FactQuotes (
         QuoteId integer PRIMARY KEY,
-        Creation datetime,
+        Creation timestamp,
         Company_Name text,
         Email text,
         NbElevator integer
     );')
 
-    quote = quote_forms.all
+    # quote = quote_forms.all
 
     quote.all.each do | q | 
     conn.exec("INSERT INTO Dana_Duquette.FactQuotes (QuoteId, Creation, Company_Name, Email, NbElevator)
@@ -24,7 +24,7 @@ begin
     conn.exec 'DROP TABLE IF EXISTS FactContact'
     conn.exec('CREATE TABLE FactContact (
         ContactId integer PRIMARY KEY,
-        Creation_Date datetime,
+        Creation_Date timestamp,
         Company_Name text,
         Email text,
         Project_Name text
@@ -41,7 +41,7 @@ begin
     conn.exec 'DROP TABLE IF EXISTS FactElevator'
     conn.exec('CREATE TABLE FactElevator (
         SerialNumber text PRIMARY KEY,
-        Date_of_commissioning datetime,
+        Date_of_commissioning timestamp,
         BuildingId integer,
         CustomerId integer,
         Building_city text
@@ -57,7 +57,7 @@ begin
 
     conn.exec 'DROP TABLE IF EXISTS DimCustomers'
     conn.exec('CREATE TABLE DimCustomers (
-        Creation_Date datetime PRIMARY KEY,
+        Creation_Date timestamp PRIMARY KEY,
         Company_Name text,
         Full_Name_of_the_company_main_contact text,
         Email_of_the_company_main_contact integer,
