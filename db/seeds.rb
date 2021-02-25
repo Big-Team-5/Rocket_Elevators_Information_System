@@ -161,7 +161,8 @@ elevatorQualityPrice = [7565,12345,15400]
         Price_Per_Unit: elevatorQualityPrice[l],
         Sum_For_All_Units: Faker::Number.decimal(l_digits: 3, r_digits: 3),
         Installation_Fees: Faker::Number.decimal(l_digits: 3, r_digits: 3),
-        Email: Faker::Internet.email
+        Email: Faker::Internet.email,
+        created_at: Faker::Time.between_dates(from: Date.today - 1, to: Date.today - 1000, period: :all)
     )
     quote.save!
     puts quote.inspect

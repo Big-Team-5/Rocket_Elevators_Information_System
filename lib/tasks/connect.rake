@@ -19,6 +19,8 @@ namespace :connect do
             );')
             puts "FactQuotes table's done"
 
+            # @QuoteForm = QuoteForm.where(["created_at > ?", 30.day.ago])
+          
             QuoteForm.all.each do | q | 
                 conn.exec("INSERT INTO FactQuotes (QuoteId, Creation, Company_Name, Email, NbElevator)
                 VALUES ( $$#{q.id}$$, $$#{q.created_at}$$, $$#{q.PhoneNumber}$$,$$ #{q.Email}$$, $$#{q.Elevators}$$)")
