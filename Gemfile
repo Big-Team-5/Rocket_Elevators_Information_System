@@ -45,6 +45,9 @@ gem 'rails_admin', '~> 2.0'
 
 gem 'toastr-rails'
 gem 'cancancan'
+gem 'multiverse'
+gem 'whenever', require: false
+gem 'pg'
 gem 'faker'
 
 

@@ -149,7 +149,7 @@ end
 
 #seeding the quote table
 puts "*** insert quote:"
-elevatorQualityPrice = [123,4000, 304040]
+elevatorQualityPrice = [7565,12345,15400]
 100.times do
     l = rand(0..2)
     quote= QuoteForm.create(
@@ -159,6 +159,7 @@ elevatorQualityPrice = [123,4000, 304040]
         Elevators: Faker::Number.between(from: 1, to: 12),
         Total_Price: Faker::Number.decimal(l_digits: 3, r_digits: 3),
         Price_Per_Unit: elevatorQualityPrice[l],
+        Sum_For_All_Units: Faker::Number.decimal(l_digits: 3, r_digits: 3),
         Installation_Fees: Faker::Number.decimal(l_digits: 3, r_digits: 3),
         Email: Faker::Internet.email
     )
@@ -222,8 +223,10 @@ address = Address.take(100)
 
   puts "####################BUILDING_DETAILS######################"
 information = ["Residential, built in 1985", "Commercial, built in 2000", "Corporate, built in 2001", "Hybrid, bult in 1998"]
-valeur = ["Residential, 2004 for 150.000$", "Commercial, 2008 for 20.000.000$, ", "Corporate, 2010 for 17.000.000$ "]
+value = ["Residential, 2004 for 150.000$", "Commercial, 2008 for 20.000.000$, ", "Corporate, 2010 for 17.000.000$ "]
 building = Building.take(20)
+
+# seeding the building details
 100.times do
     build = rand(0..3)
     inf = rand(0..3)
