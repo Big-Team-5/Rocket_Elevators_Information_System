@@ -175,12 +175,12 @@ address = Address.take(10)
     ad = rand(0..9)
     puts address[ad].inspect
     customer = Customer.create(
-      compagny_Name: Faker::Company.unique.name,
-      compagny_headquarter_address: address[ad].number_and_street,
-      full_Name_of_the_compagny_contact: Faker::Name.name,
-      email_of_the_compagny_contact: Faker::Internet.email,
-      compagny_contact_number: Faker::PhoneNumber.phone_number,
-      compagny_description: Faker::IndustrySegments.super_sector,
+      company_Name: Faker::Company.unique.name,
+      company_headquarter_address: address[ad].number_and_street,
+      full_Name_of_the_company_contact: Faker::Name.name,
+      email_of_the_company_contact: Faker::Internet.email,
+      company_contact_number: Faker::PhoneNumber.phone_number,
+      company_description: Faker::IndustrySegments.super_sector,
       full_name_of_the_technical_authority: Faker::Name.name,
       technical_manager_email_for_service: Faker::Internet.email,
       technical_authority_phone_for_service: Faker::PhoneNumber.phone_number,
@@ -213,27 +213,26 @@ customer = Customer.take(50)
     building.save!
    
     puts building.inspect
-
-    #seeding the addresses table inccording to the entiy type building
     
   end
+
+  puts "-------------------------------------------------------------"
 information = ["Residential, built in 1985", "Commercial, built in 2000", "Corporate, built in 2001", "Hybrid, bult in 1998"]
 valeur = ["Residential, 2004 for 150.000$", "Commercial, 2008 for 20.000.000$, ", "Corporate, 2010 for 17.000.000$ "]
 building = Building.take(20)
-#seeding the building details
-# 100.times do
-#     build = rand(0..3)
-#     inf = rand(0..3)
-#     val = rand(0..2)
-#     buildingDetail = BuildingDetail.create(
-#         information_key: information[inf],
-#         value: valeur[val],
-#         buildingId: building[build].id
-#     )
-#     buildingDetail.save!
-#     puts buildingDetail.inspect  
+100.times do
+    build = rand(0..3)
+    inf = rand(0..3)
+    val = rand(0..2)
+    buildingDetail = BuildingDetail.create(
+        information_key: information[inf],
+        value: valeur[val],
+        buildingId: building[build].id
+    )
+    buildingDetail.save!
+    puts buildingDetail.inspect  
     
-# end
+end
 
 #seeding the batterries table
 buildType = ["Residential", "Commercial", "Corporate", "Hybrid"]
@@ -259,11 +258,7 @@ employee = Employee.take(20)
         notes: batteryNnotes[bn],
         # created_at:
         # updated_at:
-        building_id: build.delete(build.sample),
-        
-
-
-  
+        building_id: build.delete(build.sample),  
     )
     batteries.save!
     puts batteries.inspect
@@ -307,7 +302,7 @@ employee = Employee.take(20)
                 aa = rand(0..4)
                 ab = rand(0..2)
                 Elevator.create(
-                  serial_number: Faker::Code.isbn,
+                  serial_number: Faker::Alphanumeric.alphanumeric(number: 10, min_alpha: 3, min_numeric: 3),
                   model: elevatorModel[eli],
                   building_type:  buildingType[build],
                   status: elevatorStatus[ele],
