@@ -129,22 +129,9 @@ p "users:"
    
     puts user.inspect
 end
-
-puts "####################EMPLOYEE######################"
 users = User.take(100);
-puts users[0].id.inspect
-p "employee:"
-100.times do
-    index = rand(0..49)
-    employee= Employee.create(
-        first_name: Faker::Name.first_name,
-        title: Faker::Job.title,
-        last_name: Faker::Name.last_name,
-        user_id: users[index].id
-    )
-    employee.save!
-    puts employee.inspect
-end 
+
+ 
 
 
 #seeding the quote table
@@ -184,7 +171,7 @@ address = Address.take(10)
       full_name_of_the_technical_authority: Faker::Name.name,
       technical_manager_email_for_service: Faker::Internet.email,
       technical_authority_phone_for_service: Faker::PhoneNumber.phone_number,
-      created_at: Faker::Time.between_dates(from: Date.today - 1, to: Date.today - 1000, period: :all),
+      created_at: Faker::Time.between_dates(from: Date.today - 6, to: Date.today - 1000, period: :all),
       # updated_at:
       user_id: users[index].id,
       quote_form_id: quote[quoteindex].id,
@@ -244,7 +231,6 @@ batteryStatus = ["On", "Off"]
 batteryNnotes = ["Defective", "Good for use"]
 batteryInformation = ["Made in USA", "New battery", "Made in Canada", "Old battery"]
 building = Building.take(20)
-employee = Employee.take(20)
 100.times do
     btype = rand(0..3)
     bs = rand(0..1)
@@ -257,7 +243,7 @@ employee = Employee.take(20)
         building_type: buildType[btype],
         status: batteryStatus[bs],
         date_of_commissioning: Faker::Date.between_except(from: 3.year.ago, to: 1.year.from_now, excepted: Date.today),
-        date_of_last_inspection: Faker::Date.between_except(from: 3.year.ago, to: 1.year.from_now, excepted: Date.today),
+        date_of_last_inspection: Faker::Date.backward(days: 100),
         certificate_of_operations: Faker::SouthAfrica.vat_number,
         information: batteryInformation[binf],
         notes: batteryNnotes[bn],
@@ -311,7 +297,7 @@ employee = Employee.take(20)
                   building_type:  buildingType[build],
                   status: elevatorStatus[ele],
                   date_of_commissioning: Faker::Date.between_except(from: 3.year.ago, to: 1.year.from_now, excepted: Date.today),
-                  date_of_last_inspection: Faker::Date.between_except(from: 3.year.ago, to: 1.year.from_now, excepted: Date.today),
+                  date_of_last_inspection: Faker::Date.backward(days: 100),
                   certificate_of_inspection: Faker::SouthAfrica.vat_number,
                   information: elevatorInformation[aa],
                   notes: elevatorNotes[ab],
