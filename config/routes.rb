@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :buildings
   resources :customers
   resources :addresses
+  resources :facts
   #get 'page/index'
   root 'leads#new'
   get  'page/residential'
