@@ -233,7 +233,7 @@ building = Building.take(20)
     val = rand(0..2)
     buildingDetail = BuildingDetail.create(
         information_key: information[inf],
-        value: valeur[val],
+        value: value[val],
         buildingId: building[build].id
     )
     buildingDetail.save!

@@ -13,7 +13,7 @@ namespace :connect do
             conn.exec('CREATE TABLE FactQuotes (
                 QuoteId integer PRIMARY KEY,
                 Creation timestamp,
-                Company_Name text,
+                Company_Name varchar(255),
                 Email text,
                 NbElevator integer
             );')
@@ -21,7 +21,7 @@ namespace :connect do
 
             QuoteForm.all.each do | q | 
                 conn.exec("INSERT INTO FactQuotes (QuoteId, Creation, Company_Name, Email, NbElevator)
-                VALUES ( '#{q.id}', '#{q.created_at}', '#{q.customer.company_Name}',' #{q.Email}', '#{q.Elevators}')")
+                VALUES ( $$#{q.id}$$, $$#{q.created_at}$$, $$#{q.PhoneNumber}$$,$$ #{q.Email}$$, $$#{q.Elevators}$$)")
             end
             puts ">>>>> FactQuotes section terminate <<<<<"
             #------------------------------------------------------------
@@ -30,7 +30,7 @@ namespace :connect do
             conn.exec('CREATE TABLE FactContact (
                 ContactId integer PRIMARY KEY,
                 Creation_Date timestamp,
-                Company_Name quote_text,
+                Company_Name varchar(255),
                 Email text,
                 Project_Name text
             );')
@@ -40,7 +40,7 @@ namespace :connect do
 
             Lead.all.each do | c |
                 conn.exec("INSERT INTO FactContact (ContactId, Creation_Date, Company_Name, Email, Project_Name)
-                VALUES ( '#{c.id}', '#{c.created_at}', '#{c.Company_Name}',' #{c.Email}', '#{c.Project_Name}')")
+                VALUES ( $$#{c.id}$$, $$#{c.created_at}$$, $$#{c.Company_Name}$$,$$ #{c.Email}$$, $$#{c.Project_Name}$$)")
             end
             puts ">>>>> FactContact section terminate <<<<<"
             #------------------------------------------------------------
@@ -48,7 +48,7 @@ namespace :connect do
             conn.exec 'DROP TABLE IF EXISTS FactElevator'
             conn.exec('CREATE TABLE FactElevator (
                 SerialNumber text PRIMARY KEY,
-                Date_of_commissioning timestamp,
+                Date_of_commissioning date,
                 BuildingId integer,
                 CustomerId integer,
                 Building_city text
@@ -58,7 +58,7 @@ namespace :connect do
 
             Elevator.all.each do | e |
                 conn.exec("INSERT INTO FactElevator (SerialNumber, Date_of_commissioning, BuildingId, CustomerId, Building_city)
-                VALUES ( '#{e.id}', '#{e.date_of_commissioning}', '#{e.column.battery.building.building_detail.buildingId}',' #{e.column.battery.building.customer.customer_id}', '#{e.column.battery.building.address.city}')")
+                VALUES ( $$#{e.serial_number}$$, $$#{e.date_of_commissioning}$$, $$#{e.column.battery.building.id}$$,$$ #{e.column.battery.building.customer.id}$$, $$#{e.column.battery.building.customer.address.city}$$)")
             end
             puts ">>>>> FactElevator section terminate <<<<<"
             #------------------------------------------------------------
@@ -68,7 +68,7 @@ namespace :connect do
                 Creation_Date timestamp PRIMARY KEY,
                 Company_Name text,
                 Full_Name_of_the_company_main_contact text,
-                Email_of_the_company_main_contact integer,
+                Email_of_the_company_main_contact text,
                 NbElevator integer,
                 Customer_city text
             );')
@@ -77,7 +77,7 @@ namespace :connect do
 
             Customer.all.each do | t |
                 conn.exec("INSERT INTO DimCustomers (Creation_Date, Company_Name, Full_Name_of_the_company_main_contact, Email_of_the_company_main_contact, NbElevator,Customer_city)
-                VALUES ('#{t.created_at}', '#{t.compagny_Name}', '#{t.full_Name_of_the_compagny_contact}',' #{t.email_of_the_compagny_contact}', '#{t.elevators}', '#{t.city}')")
+                VALUES ($$#{t.created_at}$$, $$#{t.company_Name}$$, $$#{t.full_Name_of_the_company_contact}$$,$$ #{t.email_of_the_company_contact}$$, $$#{t.address_id}$$, $$#{t.address.city}$$)")
             end
             puts ">>>>> DimCustomers section terminate <<<<<"
 
