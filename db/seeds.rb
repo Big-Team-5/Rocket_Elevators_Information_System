@@ -117,7 +117,7 @@ end
 
 puts "####################USERS######################"
 p "users:"
-100.times do
+200.times do
     user = User.create!(
         email: Faker::Internet.email,
         encrypted_password: Faker::Crypto.md5 ,
@@ -277,10 +277,12 @@ employee = Employee.take(20)
           puts "####################COLUMNS######################"
           columns = Column.create(
             building_type: buildingType[bt],
-            number_of_floors_served: Faker::Number.between(from: 1, to: 20),
+            number_of_floors_served: Faker::Number.between(from: 17, to: 20),
             status: columnStatus[cols],
             information: columnInformation[colInf],
             notes: colunmNotes[colN],
+            # created_at
+            # updated_at
             battery_id: batteries.id
           )    
           columns.save!
