@@ -68,7 +68,7 @@ end
 
 puts "#{Employee.count} employees created"
 
-p "*** Insert Lead:"
+puts "####################LEADS######################"
 300.times do
     lead = Lead.create(
         Full_Name: Faker::Name.name,
@@ -93,7 +93,7 @@ addressStatus = ["Active", "Inactive"]
 addressNotes = ["notes about building and customer", "note about customer", "note about client" ]
 addressType = ["Billing", "Shiping", "Home", "Business"]
 
-puts "**** Insert addresses"
+puts "####################ADDRESSES######################"
 jsonData["addresses"].each do |address| 
   at = rand(0..3)
   as = rand(0..1)
@@ -115,7 +115,7 @@ jsonData["addresses"].each do |address|
   puts address
 end
 
-p "*** seeding the users talbe"
+puts "####################USERS######################"
 p "users:"
 100.times do
     user = User.create!(
@@ -130,8 +130,8 @@ p "users:"
     puts user.inspect
 end
 
-p "*** seeding the employees tables"
-users = User.take(50);
+puts "####################EMPLOYEE######################"
+users = User.take(100);
 puts users[0].id.inspect
 p "employee:"
 100.times do
@@ -197,7 +197,7 @@ address = Address.take(10)
    
 end   
 
-puts "Buildings:"
+puts "####################BUILDINGS######################"
 customer = Customer.take(50)
  100.times do
     index = rand(0...19)
@@ -216,7 +216,7 @@ customer = Customer.take(50)
     
   end
 
-  puts "-------------------------------------------------------------"
+  puts "####################BUILDING_DETAILS######################"
 information = ["Residential, built in 1985", "Commercial, built in 2000", "Corporate, built in 2001", "Hybrid, bult in 1998"]
 valeur = ["Residential, 2004 for 150.000$", "Commercial, 2008 for 20.000.000$, ", "Corporate, 2010 for 17.000.000$ "]
 building = Building.take(20)
@@ -241,13 +241,14 @@ batteryNnotes = ["Defective", "Good for use"]
 batteryInformation = ["Made in USA", "New battery", "Made in Canada", "Old battery"]
 building = Building.take(20)
 employee = Employee.take(20)
-10.times do
+100.times do
     btype = rand(0..3)
     bs = rand(0..1)
     bn = rand(0..1)
     build = [*1..20]
     binf = rand(0..3)
     emp = rand(0..19)
+    puts "####################BATTERIES######################"
     batteries = Battery.create(
         building_type: buildType[btype],
         status: batteryStatus[bs],
@@ -256,13 +257,11 @@ employee = Employee.take(20)
         certificate_of_operations: Faker::SouthAfrica.vat_number,
         information: batteryInformation[binf],
         notes: batteryNnotes[bn],
-        # created_at:
-        # updated_at:
+        
         building_id: build.delete(build.sample),  
     )
     batteries.save!
     puts batteries.inspect
-    #seeding the columns table
     #seeding the columns table
     if batteries.persisted?
       buildingType = ["Residential", "Commercial", "Corporate"]
@@ -275,21 +274,20 @@ employee = Employee.take(20)
           cols = rand(0..1)
           colInf=rand(0..3)
           colN = rand(0..1)
+          puts "####################COLUMNS######################"
           columns = Column.create(
             building_type: buildingType[bt],
             number_of_floors_served: Faker::Number.between(from: 1, to: 20),
             status: columnStatus[cols],
             information: columnInformation[colInf],
             notes: colunmNotes[colN],
-            # created_at
-            # updated_at
             battery_id: batteries.id
           )    
           columns.save!
           puts columns.inspect
           #seeding the elevators table
           if columns.persisted?
-            puts "*************************ELEVATORS***********************"
+            puts "####################ELEVATORS######################"
             elevatorModel =["Standard", "Premium", "Excelium"]
             buildingType = ["Residential", "Commercial", "Corporate"]
             elevatorStatus = ["Idle", "Moving"]
