@@ -21,7 +21,7 @@ namespace :connect do
 
             QuoteForm.all.each do | q | 
                 conn.exec("INSERT INTO FactQuotes (QuoteId, Creation, Company_Name, Email, NbElevator)
-                VALUES ( '#{q.id}', '#{q.created_at}', '#{q.customer.compagny_Name}',' #{q.Email}', '#{q.Elevators}')")
+                VALUES ( '#{q.id}', '#{q.created_at}', '#{q.customer.company_Name}',' #{q.Email}', '#{q.Elevators}')")
             end
             puts ">>>>> FactQuotes section terminate <<<<<"
             #------------------------------------------------------------
