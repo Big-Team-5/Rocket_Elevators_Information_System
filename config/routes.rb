@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :customers
   resources :addresses
   #get 'page/index'
-  root 'leads#new'
+  root 'page#index'
   get  'page/residential'
   get  'page/commercial'
   get  'page/quote'
