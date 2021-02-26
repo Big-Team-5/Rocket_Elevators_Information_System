@@ -3,7 +3,7 @@ desc 'Fact Tables creation in PostgreSql'
 namespace :tableCreation do
 
     desc 'FactQuotes table creation in PostgreSql'
-    task factquotes: :environment do
+    task :factquotes => [ :environment ] do
 
         conn = PG::Connection.open(:host => 'localhost', :port => 5432, :dbname => 'Dana_Duquette', :user => 'surveytech', :password =>'2304godZ')
         puts "enter in postgreSQL zone"
