@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :buildings
   resources :customers
   resources :addresses
-  #get 'page/index'
+  # root 'page/index'
   root 'leads#new'
   get  'page/residential'
   get  'page/commercial'
