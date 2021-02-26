@@ -65,6 +65,6 @@ class QuoteFormsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def quote_form_params
-      params.require(:quote_form).permit(:FirstName, :LastName, :CompanyName, :PhoneNumber, :Email, :Elevators, :Price_Per_Unit, :Sum_For_All_Units, :Installation_Fees, :Total_Price)
+      params.require(:quote_form).permit(:FirstName, :LastName, :company_name, :PhoneNumber, :Email, :Elevators, :Price_Per_Unit, :Sum_For_All_Units, :Installation_Fees, :Total_Price)
     end
 end

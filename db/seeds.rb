@@ -157,6 +157,7 @@ elevatorQualityPrice = [7565,12345,15400]
         FirstName: Faker::Name.first_name,
         PhoneNumber: Faker::PhoneNumber.phone_number,
         LastName: Faker::Name.last_name,
+        company_name:  Faker::Company.unique.name,
         Elevators: elevators,
         Total_Price: totalPrice,
         Price_Per_Unit: elevatorQualityPrice[list],
