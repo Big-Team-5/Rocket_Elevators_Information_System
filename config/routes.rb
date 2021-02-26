@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'page#index'
   resources :leads
   resources :elevators
   resources :columns
@@ -8,7 +9,6 @@ Rails.application.routes.draw do
   resources :customers
   resources :addresses
   #get 'page/index'
-  root 'leads#new'
   get  'page/residential'
   get  'page/commercial'
   get  'page/quote'
