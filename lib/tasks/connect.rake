@@ -5,7 +5,7 @@ namespace :tableCreation do
     desc 'FactQuotes table creation in PostgreSql'
     task factquotes: :environment do
 
-        conn = PG::Connection.open(:host => 'localhost', :port => 5432, :dbname => 'Dana_Duquette', :user => 'surveytech', :password =>'2304godZ')
+        conn = PG::Connection.open(:host => 'codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com', :port => 5432, :dbname => 'Dana_Duquette', :user => 'codeboxx', :password =>'Codeboxx1!')
         puts "enter in postgreSQL zone"
 
         conn.exec 'DROP TABLE IF EXISTS FactQuotes'
@@ -30,7 +30,7 @@ namespace :tableCreation do
     desc 'FactContact table creation in PostgreSql'
     task factcontact: :environment do
 
-    conn = PG::Connection.open(:host => 'localhost', :port => 5432, :dbname => 'Dana_Duquette', :user => 'surveytech', :password =>'2304godZ')
+    conn = PG::Connection.open(:host => 'codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com', :port => 5432, :dbname => 'Dana_Duquette', :user => 'codeboxx', :password =>'Codeboxx1!')
     puts "enter in postgreSQL zone"
 
         conn.exec 'DROP TABLE IF EXISTS FactContact'
@@ -55,7 +55,7 @@ namespace :tableCreation do
     desc 'FactElevator table creation in PostgreSql'
     task factelevator: :environment do
 
-    conn = PG::Connection.open(:host => 'localhost', :port => 5432, :dbname => 'Dana_Duquette', :user => 'surveytech', :password =>'2304godZ')
+    conn = PG::Connection.open(:host => 'codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com', :port => 5432, :dbname => 'Dana_Duquette', :user => 'codeboxx', :password =>'Codeboxx1!')
     puts "enter in postgreSQL zone"
 
         conn.exec 'DROP TABLE IF EXISTS FactElevator'
@@ -79,7 +79,7 @@ namespace :tableCreation do
     desc 'DimCustomers table creation in PostgreSql'
     task dimcustomers: :environment do
 
-    conn = PG::Connection.open(:host => 'localhost', :port => 5432, :dbname => 'Dana_Duquette', :user => 'surveytech', :password =>'2304godZ')
+    conn = PG::Connection.open(:host => 'codeboxx-postgresql.cq6zrczewpu2.us-east-1.rds.amazonaws.com', :port => 5432, :dbname => 'Dana_Duquette', :user => 'codeboxx', :password =>'Codeboxx1!')
     puts "enter in postgreSQL zone"
 
         conn.exec 'DROP TABLE IF EXISTS DimCustomers'
