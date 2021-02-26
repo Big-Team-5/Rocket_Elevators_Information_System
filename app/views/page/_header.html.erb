@@ -57,21 +57,21 @@
                                 <%= link_to rails_admin.dashboard_path, class: 'login-button' do %>Dashboard<% end %>
                             </li>
                         <% end %>
-
-                            <%= link_to('Edit registration', edit_user_registration_path, class: 'login-button') %>
-                            <%= link_to('Logout', destroy_user_session_path, class: 'login-button', :method => :delete) %>        
-
+                            <li class="mb-0">
+                                <%= button_to('Logout', destroy_user_session_path, class: 'login-button btn-danger mb-0', :method => :delete) %>
+                            </li>
+                            <li class="mb-0">
+                                <%= link_to('Edit infos', edit_user_registration_path, class: 'login-button text-warning mb-0') %>
+                            </li>
                         <% else %>
-                            
-
-                            <%= link_to('Register', new_user_registration_path, class: 'login-button')  %>
-                            <%= link_to('Login', new_user_session_path, class: 'login-button')  %>  
-
+                            <li class="pb-0 mb-0">
+                                <%= button_to('Login', new_user_session_path, class: 'login-button mb-0') %> 
+                            </li>
+                            <li class="pb-0 mb-0">
+                                <%= link_to('Sign Up', new_user_registration_path, class: 'login-button btn-success mb-0') %>
+                            </li>
                         <% end %>
-                            
-                                
-                            
-                        
+
                     </ul>
 
                 </nav>

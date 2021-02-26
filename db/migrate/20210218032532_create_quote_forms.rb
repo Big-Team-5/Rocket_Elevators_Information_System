@@ -3,6 +3,7 @@ class CreateQuoteForms < ActiveRecord::Migration[5.2]
     create_table :quote_forms do |t|
       t.string :FirstName
       t.string :LastName
+      t.string :CompanyName
       t.string :PhoneNumber
       t.string :Email
       t.string :Elevators

@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  CustomerId: MyString
+  address_of_the_building: MyString
+  Full_name_of_the_building_administrator: MyString
+  phone_number_of_the_building_administrator: MyString
+  Full_name_of_the_technical_contact_for_the_building: MyString
+  technical_contact_email_for_the_building: MyString
+  technical_contact_phone_for_the_building: MyString
+
+two:
+  CustomerId: MyString
+  address_of_the_building: MyString
+  Full_name_of_the_building_administrator: MyString
+  phone_number_of_the_building_administrator: MyString
+  Full_name_of_the_technical_contact_for_the_building: MyString
+  technical_contact_email_for_the_building: MyString
+  technical_contact_phone_for_the_building: MyString
