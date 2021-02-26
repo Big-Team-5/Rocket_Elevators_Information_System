@@ -989,7 +989,7 @@
 									</div>
 									<div class="col-md-4">
 										<label for="contact:department">Department</label>
-										<%= form.select :Department_In_Charge, ['Maintenance', 'Residential','Commercial','Others'], class:"form-control pointer" %>
+										<%= form.select :Department_In_Charge, ['Sales', 'Support','Administration'], class:"form-control pointer" %>
 									</div>
 							</div>
 
@@ -1004,6 +1004,7 @@
 									<div class="col-md-12">
 										<label for="contact:message">Message </label>
 										<%= form.text_area :Message, class:"form-control", rows:"6", maxlength:"1000" %>
+										<small class="text-muted block">Max lenght: 1000 Char.</small>
 									</div>
 							</div>
 							<div class="row">
@@ -1011,14 +1012,14 @@
 										<label for="contact:attachment">File Attachment</label>
 
 										<!-- custom file upload -->
-									  <%= form.file_field :file_attachment, class:"custom-file-upload" %>
+									  <%= form.file_field :file_attachment, class:"custom-file-upload"%>
 										<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
 
 									</div>
 							</div>
-              <div class = "row">
+              <div class = "col pl-0">
                   <div class="actions">
-                    <%= form.submit class:"btn btn-primary" %>
+                    <%= form.submit class:"btn btn-primary btn-lg" %>
                   </div>
               </div>
 						</fieldset>
