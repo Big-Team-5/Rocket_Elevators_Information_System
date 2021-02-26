@@ -46,8 +46,8 @@ employee_list = [
   },
 ]
 
-puts "Seed Started"
-######################################################
+puts "Seed Starting"
+
 
 
 employee_list.each do |employee|
@@ -124,7 +124,7 @@ p "users:"
         password: "test1234",      
     )
     
-    #user.skip_confirmation!
+    
     user.save!
    
     puts user.inspect
@@ -134,7 +134,7 @@ users = User.take(100);
  
 
 
-#seeding the quote table
+
 puts "*** insert quote:"
 elevatorQualityPrice = [123,4000, 304040]
 100.times do
@@ -172,7 +172,6 @@ address = Address.take(10)
       technical_manager_email_for_service: Faker::Internet.email,
       technical_authority_phone_for_service: Faker::PhoneNumber.phone_number,
       created_at: Faker::Time.between_dates(from: Date.today - 6, to: Date.today - 1000, period: :all),
-      # updated_at:
       user_id: users[index].id,
       quote_form_id: quote[quoteindex].id,
       address_id: address[ad].id
@@ -209,7 +208,7 @@ address = Address.take(100)
 
   puts "####################BUILDING_DETAILS######################"
 information = ["Residential, built in 1985", "Commercial, built in 2000", "Corporate, built in 2001", "Hybrid, bult in 1998"]
-valeur = ["Residential, 2004 for 150.000$", "Commercial, 2008 for 20.000.000$, ", "Corporate, 2010 for 17.000.000$ "]
+value = [" sold in2004 for 150.000$", " bought 2008 for 20.000.000$, ", " renovated in 2010 for 17.000.000$ "]
 building = Building.take(20)
 100.times do
     build = rand(0..3)
@@ -217,15 +216,13 @@ building = Building.take(20)
     val = rand(0..2)
     buildingDetail = BuildingDetail.create(
         information_key: information[inf],
-        value: valeur[val],
+        value: value[val],
         buildingId: building[build].id
     )
     buildingDetail.save!
     puts buildingDetail.inspect  
     
 end
-
-#seeding the batterries table
 buildType = ["Residential", "Commercial", "Corporate", "Hybrid"]
 batteryStatus = ["On", "Off"]
 batteryNnotes = ["Defective", "Good for use"]
@@ -259,7 +256,7 @@ building = Building.take(20)
       columnInformation = ["Brand new", "old", "Made in US", "Made in Canada"]
       colunmNotes = ["Defective", "Good for use"]
       
-      rand(1..10).times do
+      rand(1..5).times do
           bt = rand(0..2)
           cols = rand(0..1)
           colInf=rand(0..3)
@@ -271,13 +268,10 @@ building = Building.take(20)
             status: columnStatus[cols],
             information: columnInformation[colInf],
             notes: colunmNotes[colN],
-            # created_at
-            # updated_at
             battery_id: batteries.id
           )    
           columns.save!
           puts columns.inspect
-          #seeding the elevators table
           if columns.persisted?
             puts "####################ELEVATORS######################"
             elevatorModel =["Standard", "Premium", "Excelium"]
@@ -285,7 +279,7 @@ building = Building.take(20)
             elevatorStatus = ["Idle", "Moving"]
             elevatorInformation = ["Brand new", "old", "Made in US", "Made in Canada", "in service since 4 years"]
             elevatorNotes = ["Out of service", "To be checked in a week", "The last inspection was successfull"]
-            rand(1..10).times do
+            rand(1..5).times do
                 eli = rand(0..2)
                 build = rand(0..2)
                 ele = rand(0..1)
@@ -302,7 +296,6 @@ building = Building.take(20)
                   information: elevatorInformation[aa],
                   notes: elevatorNotes[ab],
                   created_at: Faker::Time.between_dates(from: Date.today - 1, to: Date.today - 1000, period: :all), 
-                  # updated_at
                   column_id: columns.id
 
 

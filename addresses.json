@@ -1,6 +1,713 @@
 {
 	"addresses"	:	[
         {
+            "number_and_street": "220 Salem Turnpike ",
+            "suite_or_apartment":"",
+            "city": "Norwich ",
+            "postal_code": "6360",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "655 Boston Post Rd ",
+            "suite_or_apartment":"",
+            "city": "Old Saybrook",
+            "postal_code": "6475",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 625 School Street",
+            "suite_or_apartment":"",
+            "city": "Putnam",
+            "postal_code": "6260",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "80 Town Line Rd ",
+            "suite_or_apartment":"",
+            "city": "Rocky Hill",
+            "postal_code": "6067",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "465 Bridgeport Avenue ",
+            "suite_or_apartment":"",
+            "city": "Shelton ",
+            "postal_code": "6484",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 235 Queen St",
+            "suite_or_apartment":"",
+            "city": "Southington ",
+            "postal_code": "6489",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "150 Barnum Avenue Cutoff ",
+            "suite_or_apartment":"",
+            "city": "Stratford ",
+            "postal_code": "6614",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "970 Torringford Street ",
+            "suite_or_apartment":"",
+            "city": "Torrington ",
+            "postal_code": "6790",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 844 No Colony Road",
+            "suite_or_apartment":"",
+            "city": "Wallingford ",
+            "postal_code": "6492",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 910 Wolcott St",
+            "suite_or_apartment":"",
+            "city": "Waterbury ",
+            "postal_code": "6705",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "155 Waterford Parkway No ",
+            "suite_or_apartment":"",
+            "city": "Waterford ",
+            "postal_code": "6385",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "135 Fairgrounds Memorial Pkwy ",
+            "suite_or_apartment":"",
+            "city": " Ithaca ",
+            "postal_code": "14850",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "2 Gannett Dr ",
+            "suite_or_apartment":"",
+            "city": "Johnson City ",
+            "postal_code": "13790",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "233 5th Ave Ext ",
+            "suite_or_apartment":"",
+            "city": " Johnstown ",
+            "postal_code": "12095",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "601 Frank Stottile Blvd ",
+            "suite_or_apartment":"",
+            "city": "Kingston  ",
+            "postal_code": "12401",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "350 E Fairmount Ave ",
+            "suite_or_apartment":"",
+            "city": "Lakewood  ",
+            "postal_code": "14750",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "4975 Transit Rd ",
+            "suite_or_apartment":"",
+            "city": "Lancaster  ",
+            "postal_code": "14086",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "579 Troy-Schenectady Road ",
+            "suite_or_apartment":"",
+            "city": "Latham  ",
+            "postal_code": "12110",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "5783 So Transit Road ",
+            "suite_or_apartment":" ",
+            "city": "Lockport ",
+            "postal_code": "14094",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "7155 State Rt 12 S ",
+            "suite_or_apartment":"",
+            "city": "Lowville  ",
+            "postal_code": "13367",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "425 Route 31 ",
+            "suite_or_apartment":"",
+            "city": "Macedon  ",
+            "postal_code": "14502",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "3222 State Rt 11 ",
+            "suite_or_apartment":"",
+            "city": "Malone  ",
+            "postal_code": "12953",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 200 Sunrise Mall",
+            "suite_or_apartment":"",
+            "city": "Massapequa  ",
+            "postal_code": "11758",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "43 Stephenville St ",
+            "suite_or_apartment":"",
+            "city": " Massena ",
+            "postal_code": "13662",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 750 Middle Country Road",
+            "suite_or_apartment":"",
+            "city": "Middle Island ",
+            "postal_code": "11953",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "470 Route 211 East ",
+            "suite_or_apartment":"",
+            "city": "Middletown  ",
+            "postal_code": "10940",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 3133 E Main St",
+            "suite_or_apartment":"",
+            "city": " Mohegan Lake",
+            "postal_code": "10547",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "288 Larkin ",
+            "suite_or_apartment":"",
+            "city": "Monroe  ",
+            "postal_code": "10950",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "41 Anawana Lake Road ",
+            "suite_or_apartment":"",
+            "city": "Monticello  ",
+            "postal_code": "12701",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "4765 Commercial Drive ",
+            "suite_or_apartment":"",
+            "city": " New Hartford",
+            "postal_code": "13413",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 1201 Rt 300",
+            "suite_or_apartment":"",
+            "city": "Newburgh  ",
+            "postal_code": "12550",
+            "country": ""
+        },
+        {
+            "number_and_street": "255 W Main St ",
+            "suite_or_apartment":"",
+            "city": "Avon  ",
+            "postal_code": "6001",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "120 Commercial Parkway ",
+            "suite_or_apartment":"",
+            "city": "Branford  ",
+            "postal_code": "6405",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 1400 Farmington Ave",
+            "suite_or_apartment":"",
+            "city": "Bristol  ",
+            "postal_code": "6010",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "161 Berlin Road ",
+            "suite_or_apartment":"",
+            "city": "Cromwell  ",
+            "postal_code": "6416",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "67 Newton Rd ",
+            "suite_or_apartment":"",
+            "city": "Danbury  ",
+            "postal_code": "6810",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "656 New Haven Ave ",
+            "suite_or_apartment":"",
+            "city": " Derby ",
+            "postal_code": "6418",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "69 Prospect Hill Road ",
+            "suite_or_apartment":"",
+            "city": " East Windsor",
+            "postal_code": "6088",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 150 Gold Star Hwy",
+            "suite_or_apartment":"",
+            "city": "Groton  ",
+            "postal_code": "6340",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 900 Boston Post Road",
+            "suite_or_apartment":"",
+            "city": "Guilford  ",
+            "postal_code": "6437",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "2300 Dixwell Ave ",
+            "suite_or_apartment":"",
+            "city": "Hamden  ",
+            "postal_code": "6514",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 495 Flatbush Ave ",
+            "suite_or_apartment":"",
+            "city": " Hartford ",
+            "postal_code": "6106",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " ",
+            "suite_or_apartment":"",
+            "city": " ",
+            "postal_code": "",
+            "country": ""
+        },
+        {
+            "number_and_street": "180 River Rd ",
+            "suite_or_apartment":"",
+            "city": " Lisbon ",
+            "postal_code": "6351",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 420 Buckland Hills Dr",
+            "suite_or_apartment":"",
+            "city": " Manchester ",
+            "postal_code": "6040",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 1365 Boston Post Road",
+            "suite_or_apartment":"",
+            "city": "Milford  ",
+            "postal_code": "6460",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 1100 New Haven Road",
+            "suite_or_apartment":"",
+            "city": "Naugatuck ",
+            "postal_code": "6770",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "315 Foxon Blvd ",
+            "suite_or_apartment":"",
+            "city": "  New Haven ",
+            "postal_code": "6513",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "164 Danbury Rd ",
+            "suite_or_apartment":"",
+            "city": "New Milford ",
+            "postal_code": "6776",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "3164 Berlin Turnpike ",
+            "suite_or_apartment":"",
+            "city": "Newington  ",
+            "postal_code": "6111",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "474 Boston Post Road ",
+            "suite_or_apartment":"",
+            "city": "North Windham ",
+            "postal_code": "6256",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "650 Main Ave ",
+            "suite_or_apartment":"",
+            "city": "Norwalk ",
+            "postal_code": "6851",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " ",
+            "suite_or_apartment":"",
+            "city": " ",
+            "postal_code": "",
+            "country": ""
+        },
+        {
+            "number_and_street": "36 Paramount Drive ",
+            "suite_or_apartment":"",
+            "city": "Raynham ",
+            "postal_code": "2767",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 450 Highland Ave ",
+            "suite_or_apartment":"",
+            "city": " Salem",
+            "postal_code": "1970",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 1180 Fall River Avenue",
+            "suite_or_apartment":"",
+            "city": " Seekonk ",
+            "postal_code": "2771",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "680 Connecticut Avenue ",
+            "suite_or_apartment":"",
+            "city": "Norwalk  ",
+            "postal_code": "6854",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "1105 Boston Road ",
+            "suite_or_apartment":"",
+            "city": " Springfiel",
+            "postal_code": "1119",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 100 Charlton Road",
+            "suite_or_apartment":"",
+            "city": " Sturbridge",
+            "postal_code": "1566",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 262 Swansea Mall Dr",
+            "suite_or_apartment":"",
+            "city": "Swansea ",
+            "postal_code": "2777",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "333 Main Street ",
+            "suite_or_apartment":"",
+            "city": "Tewksbury ",
+            "postal_code": "1876",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "550 Providence Hwy ",
+            "suite_or_apartment":"",
+            "city": " Walpole ",
+            "postal_code": "2081",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 352 Palmer Road",
+            "suite_or_apartment":"",
+            "city": "Ware ",
+            "postal_code": "1082",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 141 Washington Ave Extension",
+            "suite_or_apartment":"",
+            "city": "Albany ",
+            "postal_code": "12205",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 13858 Rt 31 W",
+            "suite_or_apartment":"",
+            "city": " Albion",
+            "postal_code": "14411",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "2055 Niagara Falls Blvd ",
+            "suite_or_apartment":"",
+            "city": " Amherst ",
+            "postal_code": "14228",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 101 Sanford Farm Shpg Center",
+            "suite_or_apartment":"",
+            "city": "Amsterdam  ",
+            "postal_code": "12010",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 297 Grant Avenue",
+            "suite_or_apartment":"",
+            "city": "Auburn  ",
+            "postal_code": "13021",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "4133 Veterans Memorial Drive ",
+            "suite_or_apartment":"",
+            "city": " Batavia ",
+            "postal_code": "14020",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "6265 Brockport Spencerport Rd ",
+            "suite_or_apartment":"",
+            "city": "Brockport  ",
+            "postal_code": "14420",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "5399 W Genesse St ",
+            "suite_or_apartment":"",
+            "city": "Camillus  ",
+            "postal_code": "13031",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "3191 County rd 10 ",
+            "suite_or_apartment":"",
+            "city": " Canandaigua ",
+            "postal_code": "14424",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "30 Catskill ",
+            "suite_or_apartment":"",
+            "city": " Catskill ",
+            "postal_code": "12414",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 161 Centereach Mall",
+            "suite_or_apartment":"",
+            "city": " Centereach ",
+            "postal_code": "11720",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 3018 East Ave",
+            "suite_or_apartment":"",
+            "city": "Central Square ",
+            "postal_code": "13036",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "100 Thruway Plaza ",
+            "suite_or_apartment":"",
+            "city": "Cheektowaga ",
+            "postal_code": "14225",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "8064 Brewerton Rd ",
+            "suite_or_apartment":"",
+            "city": "Cicero  ",
+            "postal_code": "13039",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "5033 Transit Road ",
+            "suite_or_apartment":"",
+            "city": "Clarence  ",
+            "postal_code": "14031",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 3949 Route 31",
+            "suite_or_apartment":"",
+            "city": "Clay ",
+            "postal_code": "13041",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "139 Merchant Place ",
+            "suite_or_apartment":"",
+            "city": " Cobleskill ",
+            "postal_code": "12043",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "85 Crooked Hill Road ",
+            "suite_or_apartment":"",
+            "city": "Commack ",
+            "postal_code": "11725",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "872 Route 13 ",
+            "suite_or_apartment":"",
+            "city": "Cortlandville ",
+            "postal_code": "13045",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "279 Troy Road ",
+            "suite_or_apartment":"",
+            "city": "East Greenbush ",
+            "postal_code": "12061",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 2465 Hempstead Turnpike",
+            "suite_or_apartment":"",
+            "city": " East Meadow",
+            "postal_code": "11554",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " ",
+            "suite_or_apartment":"",
+            "city": " ",
+            "postal_code": "",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "6438 Basile Rowe ",
+            "suite_or_apartment":"",
+            "city": " East Syracuse",
+            "postal_code": "13057",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "25737 US Rt 11 ",
+            "suite_or_apartment":"",
+            "city": "Evans Mills ",
+            "postal_code": "13637",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "901 Route 110 ",
+            "suite_or_apartment":"",
+            "city": " Farmingdale ",
+            "postal_code": "11735",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "2400 Route 9 ",
+            "suite_or_apartment":"",
+            "city": "Fishkill ",
+            "postal_code": "12524",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "10401 Bennett Road ",
+            "suite_or_apartment":"",
+            "city": "Fredonia  ",
+            "postal_code": "14063",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "1818 State Route 3 ",
+            "suite_or_apartment":"",
+            "city": "Fulton  ",
+            "postal_code": "13069",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "4300 Lakeville Road ",
+            "suite_or_apartment":"",
+            "city": "Geneseo  ",
+            "postal_code": "14454",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "311 RT 9W ",
+            "suite_or_apartment":"",
+            "city": " Glenmont",
+            "postal_code": "12077",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "200 Dutch Meadows Ln ",
+            "suite_or_apartment":"",
+            "city": "Glenville  ",
+            "postal_code": "12302",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 100 Elm Ridge Center Dr",
+            "suite_or_apartment":"",
+            "city": " Greece ",
+            "postal_code": "14626",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " ",
+            "suite_or_apartment":"",
+            "city": " ",
+            "postal_code": "",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "1549 Rt 9 ",
+            "suite_or_apartment":"",
+            "city": "Halfmoon  ",
+            "postal_code": "12065",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "5360 Southwestern Blvd ",
+            "suite_or_apartment":"",
+            "city": "Hamburg  ",
+            "postal_code": "14075",
+            "country": "USA"
+        },
+        {
+            "number_and_street": "103 North Caroline St ",
+            "suite_or_apartment":"",
+            "city": "Herkimer ",
+            "postal_code": "13350",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 1000 State Route 36",
+            "suite_or_apartment":"",
+            "city": "Hornell  ",
+            "postal_code": "14843",
+            "country": "USA"
+        },
+        {
+            "number_and_street": " 1400 County Rd 64",
+            "suite_or_apartment":"",
+            "city": "Horseheads  ",
+            "postal_code": "14845",
+            "country": "USA"
+        },
+        {
             "number_and_street": "70 Pleasant Valley Street",
             "suite_or_apartment":"",
             "city": "Methuen",
