@@ -157,6 +157,7 @@ elevatorQualityPrice = [7565,12345,15400]
         FirstName: Faker::Name.first_name,
         PhoneNumber: Faker::PhoneNumber.phone_number,
         LastName: Faker::Name.last_name,
+        company_name:  Faker::Company.unique.name,
         Elevators: elevators,
         Total_Price: totalPrice,
         Price_Per_Unit: elevatorQualityPrice[list],
@@ -278,7 +279,7 @@ employee = Employee.take(20)
       columnInformation = ["Brand new", "old", "Made in US", "Made in Canada"]
       colunmNotes = ["Defective", "Good for use"]
       
-      rand(1..10).times do
+      rand(1..3).times do
           bt = rand(0..2)
           cols = rand(0..1)
           colInf=rand(0..3)
@@ -304,7 +305,7 @@ employee = Employee.take(20)
             elevatorStatus = ["Idle", "Moving"]
             elevatorInformation = ["Brand new", "old", "Made in US", "Made in Canada", "in service since 4 years"]
             elevatorNotes = ["Out of service", "To be checked in a week", "The last inspection was successfull"]
-            rand(1..10).times do
+            rand(1..3).times do
                 eli = rand(0..2)
                 build = rand(0..2)
                 ele = rand(0..1)

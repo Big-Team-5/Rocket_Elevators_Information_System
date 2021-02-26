@@ -45,7 +45,7 @@ namespace :tableCreation do
 
         Lead.all.each do | c |
             conn.exec("INSERT INTO FactContact (ContactId, Creation_Date, Company_Name, Email, Project_Name)
-            VALUES ( $$#{c.id}$$, $$#{c.created_at}$$, $$#{c.Company_Name}$$,$$ #{c.Email}$$, $$#{c.Project_Name}$$)")
+            VALUES ( $$#{c.id}$$, $$#{c.created_at}$$, $$#{c.company_Name}$$,$$ #{c.Email}$$, $$#{c.Project_Name}$$)")
         end
         puts ">>>>> FactContact section terminate <<<<<"
 
@@ -70,7 +70,7 @@ namespace :tableCreation do
 
         Elevator.all.each do | e |
             conn.exec("INSERT INTO FactElevator (SerialNumber, Date_of_commissioning, BuildingId, CustomerId, Building_city)
-            VALUES ( $$#{e.serial_number}$$, $$#{e.date_of_commissioning}$$, $$#{e.column.battery.building.id}$$,$$ #{e.column.battery.building.customer.id}$$, $$#{e.column.battery.building.customer.address.city}$$)")
+            VALUES ( $$#{e.serial_number}$$, $$#{e.date_of_commissioning}$$, $$#{e.column.battery.building.id}$$,$$ #{e.column.battery.building.customer.id}$$, $$#{e.column.battery.building.address.city}$$)")
         end
         puts ">>>>> FactElevator section terminate <<<<<"
 
