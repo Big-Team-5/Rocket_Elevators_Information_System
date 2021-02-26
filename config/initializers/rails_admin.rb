@@ -8,6 +8,9 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_user)
 
+  config.navigation_static_links = {
+    'charts' => 'page/residential' 
+  }
   # == CancanCan ==
   config.authorize_with :cancancan
 
@@ -38,4 +41,8 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+  # config.actions do
+  #   all # NB: comment out this line for RailsAdmin < 0.6.0
+  #   charts
+  # end
 end

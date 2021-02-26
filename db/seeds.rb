@@ -130,37 +130,38 @@ p "users:"
     puts user.inspect
 end
 
-puts "####################EMPLOYEE######################"
 users = User.take(100);
-puts users[0].id.inspect
-p "employee:"
-100.times do
-    index = rand(0..49)
-    employee= Employee.create(
-        first_name: Faker::Name.first_name,
-        title: Faker::Job.title,
-        last_name: Faker::Name.last_name,
-        user_id: users[index].id
-    )
-    employee.save!
-    puts employee.inspect
-end 
 
 
 #seeding the quote table
 puts "*** insert quote:"
 elevatorQualityPrice = [7565,12345,15400]
 100.times do
-    l = rand(0..2)
+    list = rand(0..2)
+    elevators = rand(1..12)
+    if list == 0
+        inFee = (7565 * elevators)* 0.1
+        totalPrice = inFee + (7565 * elevators)
+        sumOfElevator = 7565 * elevators
+    elsif list == 1
+        inFee = (12345 * elevators)* 0.13
+        totalPrice = inFee + (12345 * elevators)
+        sumOfElevator = 12345 * elevators
+    else 
+        inFee = (15400 * elevators)* 0.16
+        totalPrice = inFee + (15400 * elevators)
+        sumOfElevator = 15400 * elevators
+
+    end
     quote= QuoteForm.create(
         FirstName: Faker::Name.first_name,
         PhoneNumber: Faker::PhoneNumber.phone_number,
         LastName: Faker::Name.last_name,
-        Elevators: Faker::Number.between(from: 1, to: 12),
-        Total_Price: Faker::Number.decimal(l_digits: 3, r_digits: 3),
-        Price_Per_Unit: elevatorQualityPrice[l],
-        Sum_For_All_Units: Faker::Number.decimal(l_digits: 3, r_digits: 3),
-        Installation_Fees: Faker::Number.decimal(l_digits: 3, r_digits: 3),
+        Elevators: elevators,
+        Total_Price: totalPrice,
+        Price_Per_Unit: elevatorQualityPrice[list],
+        Sum_For_All_Units: sumOfElevator,
+        Installation_Fees: inFee,
         Email: Faker::Internet.email,
         created_at: Faker::Time.between_dates(from: Date.today - 1, to: Date.today - 1000, period: :all)
     )
@@ -186,7 +187,7 @@ address = Address.take(10)
       full_name_of_the_technical_authority: Faker::Name.name,
       technical_manager_email_for_service: Faker::Internet.email,
       technical_authority_phone_for_service: Faker::PhoneNumber.phone_number,
-      created_at: Faker::Time.between_dates(from: Date.today - 1, to: Date.today - 1000, period: :all),
+      created_at: Faker::Time.between_dates(from: Date.today, to: Date.today - 1000, period: :all),
       # updated_at:
       user_id: users[index].id,
       quote_form_id: quote[quoteindex].id,
@@ -261,7 +262,7 @@ employee = Employee.take(20)
         building_type: buildType[btype],
         status: batteryStatus[bs],
         date_of_commissioning: Faker::Date.between_except(from: 3.year.ago, to: 1.year.from_now, excepted: Date.today),
-        date_of_last_inspection: Faker::Date.between_except(from: 3.year.ago, to: 1.year.from_now, excepted: Date.today),
+        date_of_last_inspection: Faker::Date.backward(days: 100),
         certificate_of_operations: Faker::SouthAfrica.vat_number,
         information: batteryInformation[binf],
         notes: batteryNnotes[bn],
@@ -322,9 +323,7 @@ employee = Employee.take(20)
                   created_at: Faker::Time.between_dates(from: Date.today - 1, to: Date.today - 1000, period: :all), 
                   # updated_at
                   column_id: columns.id
-
-
-                    
+  
       
                 )
                 
@@ -332,10 +331,8 @@ employee = Employee.take(20)
         end
       
     end
-      
 
   end
-
     
 end
 #####################################################
