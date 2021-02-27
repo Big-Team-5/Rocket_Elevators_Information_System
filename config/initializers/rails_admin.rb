@@ -9,7 +9,7 @@ RailsAdmin.config do |config|
   config.current_user_method(&:current_user)
 
   config.navigation_static_links = {
-    'charts' => '/page/residential' 
+    'charts' => '/blazer'  
   }
   # == CancanCan ==
   config.authorize_with :cancancan
