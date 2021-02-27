@@ -1,0 +1,131 @@
+	<!-- CONTACT -->
+	<section id="contact">
+		<div class="container">
+
+			<header class="text-center mb-60">
+				<h2>Contact Us</h2>
+				<p class="lead font-lato">Our Team is avalaible 7 days a week for you</p>
+				<hr />
+			</header>
+      <%= form_with(model: @lead, local: true) do |form| %>
+        <% if @lead.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+
+            <ul>
+            <% lead.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+
+
+
+			<div class="row">
+
+				<!-- FORM -->
+				<div class="col-md-8 col-sm-8">
+
+					<h3>Drop us a line or just say <strong><em>Hello!</em></strong></h3>
+
+					<!-- Alert Success -->
+					<div id="alert_success" class="alert alert-success mb-30">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						<strong>Thank You!</strong> Your message successfully sent!
+					</div><!-- /Alert Success -->
+
+
+					<!-- Alert Failed -->
+					<div id="alert_failed" class="alert alert-danger mb-30">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						<strong>[SMTP] Error!</strong> Internal server error!
+					</div><!-- /Alert Failed -->
+
+
+					<!-- Alert Mandatory -->
+					<div id="alert_mandatory" class="alert alert-danger mb-30">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+						<strong>Sorry!</strong> You need to complete all mandatory (*) fields!
+					</div><!-- /Alert Mandatory -->
+
+					<!-- remove commentary of next line to activate the send button -->
+
+					<!-- <form action="php/contact.php" method="post" enctype="multipart/form-data"> -->
+						<fieldset>
+							<input type="hidden" name="action" value="contact_send" />
+
+							<div class="row mb-20">
+									<div class="col-md-4">
+										<label for="contact:name">Contact Full Name *</label>
+										<%= form.text_field :Full_Name, class: "form-control" %>
+									</div>
+									<div class="col-md-4">
+										<label for="contact:email">E-mail Address *</label>
+										<%= form.text_field :Email, class:"form-control" %>
+									</div>
+									<div class="col-md-4">
+										<label for="contact:phone">Phone</label>
+										<%= form.text_field :Phone, class:"form-control" %>
+									</div>
+									
+							</div>
+							<div class="row mb-20">
+								<div class="col-md-4">
+									<label for="company:name">Company Name *</label>
+									 <%= form.text_field :Company_Name, class:"form-control" %>
+								</div>
+							</div>
+
+							<div class="row mb-20">
+									<div class="col-md-8">
+										<label for="contact:subject">Project Name *</label>
+										<%= form.text_field :Project_Name, class:"form-control" %>
+									</div>
+									<div class="col-md-4">
+										<label for="contact:department">Department</label>
+										<%= form.select :Department_In_Charge, ['Sales', 'Support','Administration'], class:"form-control pointer" %>
+									</div>
+							</div>
+
+							<div class="row mb-20">
+								<div class="col-md-12">
+									<label for="contact:project_description">Project Description *</label>
+									<%= form.text_field :Project_Description, class:"form-control" %>
+								</div>
+							</div>
+
+							<div class="row mb-20">
+									<div class="col-md-12">
+										<label for="contact:message">Message </label>
+										<%= form.text_area :Message, class:"form-control", rows:"6", maxlength:"1000" %>
+									</div>
+							</div>
+							<div class="row">
+									<div class="col-md-12">
+										<label for="contact:attachment">File Attachment</label>
+
+										<!-- custom file upload -->
+									  <%= form.file_field :file_attachment, class:"btn btn-outline-primary"  %>
+										<small class="text-muted block">Max file size: 10Mb (zip/pdf/jpg/png)</small>
+
+									</div>
+							</div>
+              <div class = "row">
+                  <div class="actions">
+                    <%= form.submit class:"btn btn-primary" %>
+                  </div>
+              </div>
+						</fieldset>
+            <% end %>
+
+						<div class="row">
+							<!-- <div class="col-md-12">
+								<button type="submit" class="btn btn-primary"><i class="fa fa-check"></i> SEND MESSAGE</button>
+							</div> -->
+						</div>
+					</form>
+
+				</div>
+				<!-- /FORM -->

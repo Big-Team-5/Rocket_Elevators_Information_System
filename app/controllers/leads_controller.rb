@@ -18,6 +18,8 @@ class LeadsController < ApplicationController
   # GET /leads/1/edit
   def edit
   end
+  
+
 
   # POST /leads or /leads.json
   def create
