@@ -204,10 +204,10 @@ end
 puts "####################BUILDINGS######################"
 
 customer = Customer.take(100)
-address = Address.take(100)
+address = Address.take(200)
  100.times do
     index = rand(0..19)
-    ac = rand(0..99)
+    ac = rand(0..199)
     building = Building.create(
       full_name_building_administrator: Faker::Name.name,
       email_building_administrator: Faker::Internet.email,
