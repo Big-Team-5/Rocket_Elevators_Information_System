@@ -9,7 +9,7 @@ class CreateLeads < ActiveRecord::Migration[5.2]
       t.string :Project_Description
       t.string :Department_In_Charge
       t.string :Message
-      t.BLOB :file_attachment
+      t.MEDIUMBLOB :file_attachment
 
       t.timestamps
     end
