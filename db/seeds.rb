@@ -159,10 +159,10 @@ elevatorQualityPrice = [7565,12345,15400]
         LastName: Faker::Name.last_name,
         company_name:  Faker::Company.unique.name,
         Elevators: elevators,
-        Total_Price: totalPrice,
+        Total_Price: totalPrice.round(2),
         Price_Per_Unit: elevatorQualityPrice[list],
-        Sum_For_All_Units: sumOfElevator,
-        Installation_Fees: inFee,
+        Sum_For_All_Units: sumOfElevator.round(2),
+        Installation_Fees: inFee.round(2),
         Email: Faker::Internet.email,
         created_at: Faker::Time.between_dates(from: Date.today - 1, to: Date.today - 1000, period: :all)
     )
