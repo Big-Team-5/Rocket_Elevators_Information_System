@@ -50,6 +50,7 @@ gem 'multiverse'
 gem 'whenever', require: false
 gem 'pg'
 gem 'faker'
+gem 'blazer'
 
 
 

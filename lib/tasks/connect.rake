@@ -20,7 +20,7 @@ namespace :tableCreation do
 
         QuoteForm.all.each do | q | 
             conn.exec("INSERT INTO FactQuotes (QuoteId, Creation, Company_Name, Email, NbElevator)
-            VALUES ( $$#{q.id}$$, $$#{q.created_at}$$, $$#{q.PhoneNumber}$$,$$ #{q.Email}$$, $$#{q.Elevators}$$)")
+            VALUES ( $$#{q.id}$$, $$#{q.created_at}$$, $$#{q.company_name}$$,$$ #{q.Email}$$, $$#{q.Elevators}$$)")
         end
         puts ">>>>> FactQuotes section terminate <<<<<"
     end
